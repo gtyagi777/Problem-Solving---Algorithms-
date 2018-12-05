@@ -1,47 +1,28 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Nov  6 16:53:05 2018
-
-@author: tyagi
-"""
-
-# Write your code here
-xx = int(input())
-x = list(map(int,input().split()))
-sums = 0
-addi = []
-for i in range(len(x)):
-    sums = sums + x[i]
-    addi.append(sums)
-x = x[0:xx]
-zz = int(input())
-xx =[]
-for a in range(zz):
-    xx.append(int(input()))
-
-def rec_binary_search(arr,ele):
-    if len(arr) == 0:
-        return False
+#code
+from collections import permutation
+def fuc(x,y):
+    if x == y:
+        return 0
     else:
-        mid = len(arr)//2
-        
-        if (arr[mid-1] <= ele and arr[mid-1] <= ele) or arr[mid] ==ele :
-            return True
-        else :
-            if ele < arr[mid]:
-                return rec_binary_search(arr[:mid],ele)
+        z = x ^ y
+    z = list("{0:b}".format(z))
+    return z.count(1)
 
-            else:
-                return rec_binary_search(arr[mid+1:],ele)
+for _ in range(int(input())):
+    dict = {}
+    n - int(input()
+    arr = list(map(int,input().split()))
+    z = list(permutation(arr,2)
+    count = 0
+    for i in z:
+        x,y = i
+        cc =".".join(i)
+        c = 0
+        if cc not in dict:
+            c = func(x,y)
+            dict[cc] = c
+        else:
+            c = dict[cc]
+        count += c
+    print(count)
     
-
-
-for i in range(len(xx)):
-    c = 0
-    xxx = True
-    for j in range(len(addi)):
-        if xxx:
-            if addi[j] >= xx[i]:
-                xxx= False
-                c = j +1
-    print (c)

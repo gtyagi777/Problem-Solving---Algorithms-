@@ -1,25 +1,14 @@
-
-x = list([1, 2, 1, 3, 4])
-y = sum(x)
-xx =[4,2,10]
-
-
-# Write your code here
-num= int(input())
-x = list(map(int,input().split()))
-sums = sum(x)
-zz = int(input())
-for _ in range(zz):
+from sys import stdin,stdout
+import itertools
+import bisect
+num  = (stdin.readline())
+x = list(map(int,stdin.readline().split()))
+y = tuple(itertools.accumulate(x))
+num  = int(stdin.readline())
+for _ in range(num):
     xx = int(input())
-    if xx > sums:
+    if xx > y[-1]:
         print ("-1")
     else:
-        sumz = 0
-        for j in range(num):
-            sumz = x[j] + sumz
-            if sumz >= xx:
-                print (j+1)
-                break
-            
-
-
+        c = bisect.bisect_left(y,xx)
+        print(c+1)
