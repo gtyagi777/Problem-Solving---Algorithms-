@@ -1,9 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sat Oct 13 14:41:21 2018
-
-@author: tyagi
-"""
 def add(x,y):
     carry = 0
     c=[]
