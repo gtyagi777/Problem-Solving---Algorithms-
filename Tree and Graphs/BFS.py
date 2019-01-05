@@ -3,7 +3,6 @@ class Graph:
 
 	# Constructor 
 	def __init__(self): 
-
 		# default dictionary to store graph 
 		self.graph = defaultdict(list) 
 
